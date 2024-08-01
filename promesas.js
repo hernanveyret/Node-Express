@@ -1,4 +1,4 @@
-const promesaCumplida = false;
+const promesaCumplida = false; // se simula el exito o rechazo de la promesa
 
 const miPromesa = new Promise((resolve, reject) => {
   setTimeout(() => {
