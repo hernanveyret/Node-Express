@@ -1,13 +1,13 @@
 const productos = [`Zapatilla`,'Zapato','Ojota','Pantufla','Bota'];
 
 function tomarPedido(producto){
-  console.log(producto)
+ 
   let pedido = productos.filter(e => e.toString().toLowerCase() === producto.toLowerCase()).join().toLowerCase();
-  console.log(pedido)
+  
   return new Promise((resolve, reject) => {
     setTimeout(() => {
       if(pedido){
-        resolve(`Tomando pedido de ${pedido}`);
+        resolve(`Tomando pedido de ${pedido[0].toUpperCase() + pedido.slice(1).toLowerCase()}`);
       }else{
         reject('No hay stock en este momento!')
       }
