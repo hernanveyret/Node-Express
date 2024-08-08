@@ -1,0 +1,6 @@
+POST http://localhost:3000/curso/node.js/freecodecamp
+
+
+pARA PROBAR LOS METODOS CON LA EXTENCION Rest Client, se hace click
+en send request y aparece la informacion en una ventana en vscode
+tambien aparece en la consola cuando esta funcionando el servidor.
