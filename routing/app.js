@@ -23,7 +23,7 @@ function manejarSolicitudGET(req,res){
   if(path === '/'){ // Si el camino esta en la pagina principal
     // res.statusCode = 200;
     // res.writeHead(200, {'Content-Type':'application/json'}); // para ver como funciona
-    return res.end('Bienvenidos a mi primer servidor y API creado con Node.js')
+    return res.end('Bienvenidos a mi primer servidor y API creado con Node.js.')
   }else if(path === '/cursos'){
     // res.statusCode = 200;
     return res.end(JSON.stringify(infoCursos)); // convierte el archivo a formato JSON ( texto plano "string" )
@@ -45,7 +45,7 @@ function manejarSolicitudPOST(req,res){
     let cuerpo = '';
 
     req.on('data', contenido => { // obtiene el contenido de la solicitud
-      cuerpo += contenido.toString(); // pasaa una cadena de caracteres y se agrega a la variable cuerpo
+      cuerpo += contenido.toString(); // pasa a una cadena de caracteres y se agrega a la variable cuerpo
     });
 
     req.on('end', () => { // cuando finaliza muestra los console.log siguientes
