@@ -19,6 +19,26 @@ app.get('/api/cursos/matematicas',(req,res)=> {
   res.send(infoCursos.matematicas);
 });
 
+// parametros de ruta
+app.get('/api/cursos/programacion/:lenguaje', (req,res) => {
+  const lenguaje = req.params.lenguaje;
+  const resultado = infoCursos.programacion.filter(c => c.lenguaje === lenguaje);
+
+  if(resultado.length === 0 ){
+    return res.status(404).send(`Error: ${res.statusCode}, No se encontro el curso de ${lenguaje}`)
+  }
+  res.send(resultado)
+}),
+
+app.get('/api/cursos/matematicas/:tema', (req,res) => {
+  const tema = req.params.tema;
+  const resultado = infoCursos.matematicas.filter(c => c.tema === tema);
+  console.log(tema)
+  if(resultado.length === 0 ){
+    return res.status(404).send(`Error: ${res.statusCode}, No se encontro el curso de ${tema}`)
+  }
+  res.send(resultado)
+})
 const PUERTO = process.env.PORT || 3000;
 
 app.listen(PUERTO, () => {
