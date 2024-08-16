@@ -39,6 +39,19 @@ app.get('/api/cursos/matematicas/:tema', (req,res) => {
   }
   res.send(resultado)
 })
+
+//Varias rutas
+app.get('/api/cursos/programacion/:lenguaje/:nivel', (req, res) => {
+  const lenguaje = req.params.lenguaje;
+  const nivel = req.params.nivel;
+  const resultado = infoCursos.programacion.filter(c => c.lenguaje === lenguaje && c.nivel === nivel);
+
+  if(resultado.length === 0){
+    return res.status(404).send(`Error ${statusCode}, No se encontronel curso especificado.`)
+  }
+  res.send(resultado);
+});
+
 const PUERTO = process.env.PORT || 3000;
 
 app.listen(PUERTO, () => {

@@ -18,8 +18,15 @@ let infoCursos = {
       id: 3,
       titulo: 'Aprende Python',
       lenguaje: 'python',
-      vistas: 132548,
+      vistas: 1,
       nivel: 'basico'
+    },
+    {
+      id: 4,
+      titulo: 'Aprende Python Intermedio',
+      lenguaje: 'python',
+      vistas: 2,
+      nivel: 'intermedio'
     }
   ],
   'matematicas': [
