@@ -1,0 +1,36 @@
+POST http://localhost:3000/api/cursos/programacion HTTP/1.1
+Content-Type: application/json
+
+{
+  "id":6,
+  "titulo":"Aprende C++",
+  "lenguaje":"C++",
+  "vistas":15899,
+  "nivel":"basico"
+}
+
+###
+
+PUT http://localhost:3000/api/cursos/programacion/2 HTTP/1.1
+Content-Type: application/json
+
+{
+  "id":2,
+  "titulo":"Aprende React",
+  "lenguaje":"React",
+  "vistas":15899,
+  "nivel":"basico"
+}
+
+###
+DELETE http://localhost:3000/api/cursos/programacion/4 HTTP/1.1
+Content-Type: application/json
+
+###
+PATCH http://localhost:3000/api/cursos/programacion/4 HTTP/1.1
+Content-Type: application/json
+
+{
+  "titulo":"Hola, como estas",
+  "vistas": 2
+}
